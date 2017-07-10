@@ -1,9 +1,6 @@
 # Demo for Codemotion 2017 Milan by Gabriele Nocco
 # @gnocco
 
-# install rsparkling package
-
-
 ### Connection to Spark/H2O cluster ###
 
 library(rsparkling)
