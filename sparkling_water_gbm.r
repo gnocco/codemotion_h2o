@@ -3,6 +3,7 @@
 
 # install rsparkling package
 
+
 ### Connection to Spark/H2O cluster ###
 
 library(rsparkling)
