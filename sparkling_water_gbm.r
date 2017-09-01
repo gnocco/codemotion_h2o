@@ -12,11 +12,11 @@ library(sparklyr)
 options(rsparkling.sparklingwater.version = "2.0.2")
 
 config <- spark_config()
-config$sparklyr.gateway.port = 10000
-config$sparklyr.gateway.connect.timeout = 1
-config$sparklyr.gateway.start.wait = 1000
+#config$sparklyr.gateway.port = 10000
+#config$sparklyr.gateway.connect.timeout = 1
+#config$sparklyr.gateway.start.wait = 1000
 
-sc <- spark_connect(master = "local[*]", config = config, version = "2.0.2")
+sc <- spark_connect(master = "local[*]", config = config)
 
 ### ETL - Preprocessing ###
 
