@@ -11,6 +11,7 @@ library(sparklyr)
 # for Spark 2.0.x
 options(rsparkling.sparklingwater.version = "2.0.2")
 
+
 sc <- spark_connect(master = "local[*]")
 
 ### ETL - Preprocessing ###
