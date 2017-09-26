@@ -1,6 +1,9 @@
 # Demo for Codemotion 2017 Milan by Gabriele Nocco
 # @gnocco
 
+# install rsparkling package
+
+
 ### Connection to Spark/H2O cluster ###
 
 library(rsparkling)
@@ -9,7 +12,12 @@ library(dplyr)
 library(sparklyr)
 
 # for Spark 2.0.x
-options(rsparkling.sparklingwater.version = "2.0.2")
+options(rsparkling.sparklingwater.version = "2.1.14")
+
+#config <- spark_config()
+#config$sparklyr.gateway.port = 10000
+#config$sparklyr.gateway.connect.timeout = 1
+#config$sparklyr.gateway.start.wait = 1000
 
 sc <- spark_connect(master = "local[*]")
 
