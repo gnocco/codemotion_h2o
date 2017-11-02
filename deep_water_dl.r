@@ -1,7 +1,7 @@
 # Demo for Codemotion 2017 Milan by Gabriele Nocco
 # @gnocco
 
-### Connection to TensorFlow/H2O cluster ###
+### Connection to TensorFlow/Mxnet/H2O cluster ###
 
 library(h2o)
 h2o.init(max_mem_size="16G")
@@ -43,4 +43,3 @@ deepwater_gridperf1 <- h2o.getGrid(grid_id = "deepwater_grid",
                              decreasing = FALSE)
 
 h2o.saveModel(h2o.getModel("deepwater_grid_model_0"), path = "/home/h2o")
-
