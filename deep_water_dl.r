@@ -36,8 +36,6 @@ dw_grid = h2o.grid("deepwater", grid_id="deepwater_grid",
                    search_criteria = search_criteria,
                    gpu=FALSE
                    )
-
-
 deepwater_gridperf1 <- h2o.getGrid(grid_id = "deepwater_grid", 
                              sort_by = "logloss", 
                              decreasing = FALSE)
