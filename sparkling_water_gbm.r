@@ -80,9 +80,9 @@ print(gbm_gridperf1)
 ### Save a Model ###
 
 
-h2o.saveModel(gbm_model, path = "/home/gnocco")
+h2o.saveModel(gbm_model, path = "/home/h2o")
 
-h2o.download_pojo(gbm_model, path = "/home/gnocco")
+h2o.download_pojo(gbm_model, path = "/home/h2o")
 
 
 ### Disconnect ###

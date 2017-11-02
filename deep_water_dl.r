@@ -4,7 +4,7 @@
 ### Connection to TensorFlow/H2O cluster ###
 
 library(h2o)
-h2o.init()
+h2o.init(max_mem_size="16G")
 if (!h2o.deepwater.available()) return()
 
 train <- as.h2o(iris)
@@ -33,6 +33,14 @@ dw_grid = h2o.grid("deepwater", grid_id="deepwater_grid",
                    stopping_metric="logloss",
                    stopping_tolerance=1e-3,    ## stop once validation logloss of the cv models doesn't improve enough
                    hyper_params=hyper_params,  
-                   search_criteria = search_criteria)
+                   search_criteria = search_criteria,
+                   gpu=FALSE
+                   )
 
-dw_grid
+
+deepwater_gridperf1 <- h2o.getGrid(grid_id = "deepwater_grid", 
+                             sort_by = "logloss", 
+                             decreasing = FALSE)
+
+h2o.saveModel(h2o.getModel("deepwater_grid_model_0"), path = "/home/h2o")
+
